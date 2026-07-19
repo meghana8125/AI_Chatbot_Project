@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>NOVA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <!-- Header -->
+    <div class="header">
+
+    <h1>🤖 Nova AI</h1>
+
+    <div class="header-buttons">
+
+        <button id="new-chat">
+            🗑 New Chat
+        </button>
+
+        <button id="dark-mode">
+            🌙 Dark
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- Chat Messages -->
+    <div id="chat-box">
+    <div class="bot">
+        <strong>🤖 Nova AI</strong>
+        <div class="response-text">
+            👋 Hello! I'm <b>Nova AI</b>.  
+        </div>
+    </div>
+</div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+
+        <input
+            type="file"
+            id="image"
+            accept="image/*">
+            <div id="image-preview-container">
+
+    <img
+        id="image-preview"
+        src=""
+        alt="Preview">
+
+</div>
+
+        <input
+            type="text"
+            id="message"
+            placeholder="Ask anything...">
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
